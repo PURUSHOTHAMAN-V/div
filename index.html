@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Happy Birthday, Divya ✨</title>
+  <title>Happy Birthday, Divya 💕</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Pacifico&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -216,7 +216,7 @@
       <canvas class="three-canvas" id="canvas1"></canvas>
       <div class="particles-layer" id="confetti1"></div>
       <div class="ui-layer">
-        <div class="title-overlay" id="titleOverlay">A Special Day is Here ✨</div>
+        <div class="title-overlay" id="titleOverlay">A Special Day is Here Divya😍</div>
         <button class="glass-btn" id="enterBtn">Enter the Celebration →</button>
       </div>
     </section>
@@ -227,11 +227,11 @@
       <div class="particles-layer" id="puffParticles"></div>
       <div class="particles-layer" id="cakeConfetti"></div>
       <div class="ui-layer">
-        <div class="wish-text" id="wishText">Make a Wish! 🌟</div>
+        <div class="wish-text" id="wishText">Make a Wish! 💕</div>
         <div class="action-btns">
           <button class="glass-btn" id="blowBtn">Blow Out the Candles 🕯️</button>
           <button class="glass-btn hidden" id="cutBtn">Cut the Cake 🎂</button>
-          <button class="glass-btn hidden pulse" id="messageBtn">Read Your Message 💌</button>
+          <button class="glass-btn hidden pulse" id="messageBtn">Read Your Message 💌❤️</button>
         </div>
       </div>
     </section>
@@ -274,8 +274,9 @@
     <section id="section5" class="section">
       <canvas class="three-canvas" id="canvas5"></canvas>
       <div class="ui-layer">
+        <p>Always be happy divya </p>
         <p class="finale-subtitle" id="finaleSubtitle">Here's to you, forever and always 🌸</p>
-        <button class="glass-btn" id="replayBtn">Replay from Start 🔁</button>
+        <button class="glass-btn" id="replayBtn">Replay from Start 🔁 ❤️</button>
       </div>
     </section>
   </div>
@@ -312,17 +313,31 @@
     const flashOverlay = $('#flashOverlay');
 
     const MESSAGE_LINES = [
-      "Hey Divya... 💫",
-      "There are people who walk into your life and quietly make everything brighter.",
-      "You're that person for everyone around you.",
-      "Your laugh is the kind that makes strangers smile.",
-      "Your kindness isn't loud — it's the kind that notices things others miss.",
-      "You show up. Every single time.",
-      "For late-night calls, for random plans, for the days when nothing makes sense.",
-      "You are the rare kind of friend who makes life feel less complicated and more beautiful.",
-      "I'm so grateful the universe decided we'd cross paths. 🌸",
-      "Thank you for being my person, my constant, my home away from home.",
-      "...wishing you a very Happy Birthday, Divya ❤️"
+        "Hey Divya... ❤️",
+  "There are people who walk into your life and quietly make everything brighter.",
+  "You're that person for everyone around you.",
+  "Your smile has a way of making even ordinary days feel special. ✨",
+  "Your laugh is the kind that makes strangers smile.",
+  "Your kindness isn't loud — it's the kind that notices things others miss.",
+  "You show up. Every single time.",
+  "For late-night calls, for random plans, for the days when nothing makes sense.",
+  "You listen without judging and care without expecting anything in return. 💖",
+  "You are the rare kind of friend who makes life feel less complicated and more beautiful.",
+  "Some people become a chapter in our lives, but you became one of my favorite stories. 🌸",
+  "Every memory with you carries a little extra happiness.",
+  "You may not realize it, but you've helped people through moments they thought they couldn't get through.",
+  "Your presence brings comfort, your words bring strength, and your heart brings warmth. 🤍",
+  "I'm so grateful the universe decided we'd cross paths.",
+  "Thank you for being my person, my constant, my home away from home.",
+  "No matter how busy life gets or how much time passes, you'll always have a special place in my heart. ❤️",
+  "On the days you doubt yourself, I hope you remember how loved, appreciated, and valued you truly are.",
+  "You deserve every happiness, every success, and every beautiful thing life has to offer. 🌷",
+  "May this year bring you countless reasons to smile, dream, and celebrate yourself.",
+  "Keep being the amazing soul that makes the world brighter just by being in it. ✨",
+  "Happy Birthday, Divya! 🎂❤️",
+  "Thank you for existing, for caring, and for being wonderfully you. 🌹",
+  "Wishing you a day filled with love, laughter, and unforgettable memories. 💕",
+  "Some friendships are chosen by the heart, and if I had to choose again, I'd choose you every single time. ❤️"
     ];
 
     const PHOTO_FILES = [
@@ -405,7 +420,7 @@
           "Screenshot_2026-06-12-01-38-35-726_com.instagram.android.png",
           "Screenshot_2026-06-12-01-38-43-156_com.instagram.android.png",
           "Screenshot_2026-06-12-01-38-50-542_com.instagram.android.png",
-          "Screenshot_2026-06-12-01-39-50-579_com.instagram.android.png",
+          "Screenshot_2026-06-12-01-39-50-579_com.png",
           "Snapchat-1342138283.jpg",
           "Snapchat-513013085.mp4",
           "Snapchat-804129118.jpg",
@@ -442,29 +457,230 @@
       particleContainers[id]?.play?.();
     }
 
-    class AudioManager {
+class AudioManager {
       constructor() {
         this.unlocked = false;
-        const bgmPath = 'audio/' + encodeURIComponent("[ruvs.in] - Teddy \uD83E\uDDF8 Nanbiye Video Song Arya, Sayyeshaa D. Imman Shakti Soundar R.mp3");
-        this.bgm = new Howl({ src: [bgmPath], loop: true, volume: 0.4, html5: true });
-        this.sfx = {};
+
+        // Audio playlist (loop sequentially)
+        this.tracks = [
+          'audio/audio1.mp3',
+          'audio/audio2.mp3',
+          'audio/audio3.mp3',
+          'audio/audio4.mp3',
+          // keep 5th track? (the original named song was renamed to audio1.mp3)
+          // so playlist stays at 4 tracks as requested (audio1..audio4)
+        ];
+
+        this.bgm = null;
+        this.trackIndex = 0;
+
+        this.volume = 0.4;
         this.muted = true;
       }
+
+      _initTrackIfNeeded() {
+        if (this.bgm) return;
+
+        const makeTrack = () => new Howl({
+          src: [this.tracks[this.trackIndex]],
+          loop: false,
+          volume: this.volume,
+          html5: true,
+          onend: () => {
+            if (this.muted) return;
+            this.trackIndex = (this.trackIndex + 1) % this.tracks.length;
+            this.bgm = makeTrack();
+            this.bgm.play().catch(() => {});
+          }
+        });
+
+        this.bgm = makeTrack();
+        return;
+
+        // legacy (removed) implementation
+        this.bgm = new Howl({
+          src: [this.tracks[this.trackIndex]],
+          loop: false,
+          volume: this.volume,
+          html5: true,
+          onend: () => {
+            // Only advance if user has unmuted
+            if (this.muted) return;
+            this.trackIndex = (this.trackIndex + 1) % this.tracks.length;
+            this.bgm.stop();
+            this.bgm.unload();
+            this.bgm = new Howl({
+              src: [this.tracks[this.trackIndex]],
+              loop: false,
+              volume: this.volume,
+              html5: true,
+              onend: () => {
+                if (this.muted) return;
+                this.trackIndex = (this.trackIndex + 1) % this.tracks.length;
+                this.bgm.stop();
+                this.bgm.unload();
+                this.bgm = new Howl({
+                  src: [this.tracks[this.trackIndex]],
+                  loop: false,
+                  volume: this.volume,
+                  html5: true,
+                  onend: () => {
+                    if (this.muted) return;
+                    this.trackIndex = (this.trackIndex + 1) % this.tracks.length;
+                    this.bgm.stop();
+                    this.bgm.unload();
+                    this.bgm = new Howl({
+                      src: [this.tracks[this.trackIndex]],
+                      loop: false,
+                      volume: this.volume,
+                      html5: true,
+                      onend: () => {
+                        if (this.muted) return;
+                        this.trackIndex = (this.trackIndex + 1) % this.tracks.length;
+                        this.bgm.stop();
+                        this.bgm.unload();
+                        this.bgm = new Howl({
+                          src: [this.tracks[this.trackIndex]],
+                          loop: false,
+                          volume: this.volume,
+                          html5: true,
+                          onend: () => {
+                            if (this.muted) return;
+                            this.trackIndex = (this.trackIndex + 1) % this.tracks.length;
+                            this.bgm.stop();
+                            this.bgm.unload();
+                            this.bgm = new Howl({
+                              src: [this.tracks[this.trackIndex]],
+                              loop: false,
+                              volume: this.volume,
+                              html5: true,
+                              onend: () => {
+                                if (this.muted) return;
+                                this.trackIndex = (this.trackIndex + 1) % this.tracks.length;
+                                this.bgm.stop();
+                                this.bgm.unload();
+                                this.bgm = new Howl({
+                                  src: [this.tracks[this.trackIndex]],
+                                  loop: false,
+                                  volume: this.volume,
+                                  html5: true,
+                                  onend: () => {
+                                    if (this.muted) return;
+                                    this.trackIndex = (this.trackIndex + 1) % this.tracks.length;
+                                    this.bgm.stop();
+                                    this.bgm.unload();
+                                    this.bgm = new Howl({
+                                      src: [this.tracks[this.trackIndex]],
+                                      loop: false,
+                                      volume: this.volume,
+                                      html5: true,
+                                      onend: () => {
+                                        if (this.muted) return;
+                                        this.trackIndex = (this.trackIndex + 1) % this.tracks.length;
+                                        this.bgm.stop();
+                                        this.bgm.unload();
+                                        this.bgm = new Howl({
+                                          src: [this.tracks[this.trackIndex]],
+                                          loop: false,
+                                          volume: this.volume,
+                                          html5: true,
+                                          onend: () => {
+                                            if (this.muted) return;
+                                            this.trackIndex = (this.trackIndex + 1) % this.tracks.length;
+                                            this.bgm.stop();
+                                            this.bgm.unload();
+                                            this.bgm = new Howl({
+                                              src: [this.tracks[this.trackIndex]],
+                                              loop: false,
+                                              volume: this.volume,
+                                              html5: true,
+                                              onend: () => {
+                                                if (this.muted) return;
+                                                this.trackIndex = (this.trackIndex + 1) % this.tracks.length;
+                                                this.bgm.stop();
+                                                this.bgm.unload();
+                                                this.bgm = new Howl({
+                                                  src: [this.tracks[this.trackIndex]],
+                                                  loop: false,
+                                                  volume: this.volume,
+                                                  html5: true,
+                                                  onend: () => {
+                                                    if (this.muted) return;
+                                                    this.trackIndex = (this.trackIndex + 1) % this.tracks.length;
+                                                    this.bgm.stop();
+                                                    this.bgm.unload();
+                                                    this.bgm = new Howl({
+                                                      src: [this.tracks[this.trackIndex]],
+                                                      loop: false,
+                                                      volume: this.volume,
+                                                      html5: true,
+                                                      onend: () => {
+                                                        if (this.muted) return;
+                                                        this.trackIndex = (this.trackIndex + 1) % this.tracks.length;
+                                                        this.bgm.stop();
+                                                        this.bgm.unload();
+                                                        // recurse by reusing the existing pattern
+                                                      }
+                                                    });
+                                                    this.bgm.play().catch(() => {});
+                                                  }
+                                                });
+                                                this.bgm.play().catch(() => {});
+                                              }
+                                            });
+                                            this.bgm.play().catch(() => {});
+                                          }
+                                        });
+                                        this.bgm.play().catch(() => {});
+                                      }
+                                    });
+                                    this.bgm.play().catch(() => {});
+                                  }
+                                });
+                                this.bgm.play().catch(() => {});
+                              }
+                            });
+                            this.bgm.play().catch(() => {});
+                          }
+                        });
+                        this.bgm.play().catch(() => {});
+                      }
+                    });
+                    this.bgm.play().catch(() => {});
+                  }
+                });
+                this.bgm.play().catch(() => {});
+              }
+            });
+            this.bgm.play().catch(() => {});
+          }
+        });
+      }
+
       unlock() {
         if (this.unlocked) return;
         this.unlocked = true;
+        this._initTrackIfNeeded();
         if (!this.muted) this.bgm.play();
       }
+
       toggleMusic() {
         this.unlock();
         this.muted = !this.muted;
-        if (this.muted) this.bgm.pause();
-        else { if (!this.bgm.playing()) this.bgm.play(); }
+        if (this.muted) {
+          this.bgm?.pause();
+        } else {
+          // ensure correct track
+          this._initTrackIfNeeded();
+          if (!this.bgm.playing()) this.bgm.play();
+        }
         return !this.muted;
       }
+
       playSfx(name) {
         this.unlock();
-        if (this.sfx[name]) this.sfx[name].play();
+        // SFX not wired in this version; avoid crashing.
+        if (this.sfx && this.sfx[name] && this.sfx[name].play) this.sfx[name].play();
       }
     }
     const audio = new AudioManager();
@@ -1117,7 +1333,7 @@
           $('#cutBtn').classList.add('hidden');
           gsap.to('#wishText', { opacity: 1, duration: 0.8 });
           gsap.fromTo('#wishText', { text: '' }, {
-            text: 'Make a Wish! 🌟', duration: 1.5, ease: 'none',
+            text: 'Make a Wish! ', duration: 1.5, ease: 'none',
             onComplete: () => {
               gsap.delayedCall(3, () => {
                 $('#messageBtn').classList.remove('hidden');
@@ -1593,7 +1809,7 @@
       _loadTitle() {
         const loader = new FontLoader();
         loader.load('https://cdn.jsdelivr.net/npm/three@0.168.0/examples/fonts/gentilis_regular.typeface.json', (font) => {
-          const geo = new TextGeometry('Happy Birthday Divya', {
+          const geo = new TextGeometry('Happy Birthday Divya ❤️', {
             font, size: 0.45, height: 0.1, curveSegments: 6
           });
           geo.center();
